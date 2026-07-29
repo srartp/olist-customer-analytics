@@ -7,5 +7,5 @@ sources:
       - name: orders
       - name: customers
       - name: order_items
-      - name: payments
+      - name: order_payments
       - name: order_reviews
