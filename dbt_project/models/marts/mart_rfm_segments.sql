@@ -29,6 +29,22 @@ rfm_with_recency as (
         last_order_date,
         date_diff('day', last_order_date, (select max(order_purchase_timestamp) from {{ ref('fct_orders') }})) as recency_days
     from rfm_base
+),
+
+rfm_scores as (
+
+    select 
+        customer_unique_id,
+        n_orders, 
+        total_spent,
+        last_order_date,
+        recency_days,
+        ntile(5) over (order by recency_days desc) as r_score,
+        ntile(5) over (order by n_orders asc) as f_score,
+        ntile(5) over (order by total_spent asc) as m_score
+    
+    from rfm_with_recency
 )
-select * from rfm_with_recency
+
+select * from rfm_scores
 
