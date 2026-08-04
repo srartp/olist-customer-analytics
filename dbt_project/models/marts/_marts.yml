@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: fct_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+
+  - name: mart_rfm_segments
+    columns:
+      - name: customer_unique_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_segment
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Champions', 'Loyal Customers', 'New Customers', 'At Risk', 'Lost', 'Needs Attention', 'Promising', 'Big Spenders', 'Others']
