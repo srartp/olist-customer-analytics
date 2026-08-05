@@ -20,3 +20,9 @@ models:
           - accepted_values:
               arguments:
                 values: ['Champions', 'Loyal Customers', 'New Customers', 'At Risk', 'Lost', 'Needs Attention', 'Promising', 'Big Spenders', 'Others']
+
+  - name: mart_cohort_retention
+    columns:
+      - name: retention_rate_pct
+        tests:
+          - not_null
