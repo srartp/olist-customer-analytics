@@ -22,6 +22,9 @@ impact?
 ## Key Insights
 
 <!-- 3-4 bullet points with numbers + one visual each. Fill as you go. -->
+- **Data coverage & cleaning:** The dataset spans Sept 2016 – Oct 2018, but Sept–Dec 2016 show erratic order volumes (as low as 1 order/month) — consistent with a platform ramp-up period — and Sept–Oct 2018 are incomplete. Analysis is restricted to Jan 2017 – Aug 2018 for reliable trend and cohort analysis.
+
+- Given that ~97% of customers made only one purchase, the frequency dimension has limited discriminating power, most of the segmentation signal comes from recency and monetary value."
 
 ## Recommendations
 
